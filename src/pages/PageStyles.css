@@ -1,0 +1,49 @@
+.login-card {
+  background: white;
+  width: 400px;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  margin: 100px auto;
+  text-align: center;
+}
+
+.login-card input {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.login-card h2 {
+  margin-bottom: 20px;
+  color: #2d3436;
+}
+
+.admin-btn {
+  background: #d63031;
+  color: white !important;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.admin-btn:hover {
+  background: #ff7675;
+}
+
+.logout-btn {
+  margin-left: 15px;
+  background-color: #636e72;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background-color: #b2bec3;
+}

@@ -1,0 +1,547 @@
+/* ========= Layout ========= */
+.postride-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  animation: fadeInBg 1s ease-in-out;
+}
+
+/* ========= Form Card ========= */
+.form-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  border-radius: 16px;
+  padding: 40px 50px;
+  width: 100%;
+  max-width: 720px;
+  color: #f5f5f5;
+  animation: fadeIn 0.6s ease;
+  transition: all 0.3s ease;
+}
+
+.form-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.6);
+}
+
+.form-card h2 {
+  text-align: center;
+  color: #00bcd4;
+  margin-bottom: 8px;
+  font-size: 1.9rem;
+  letter-spacing: 0.5px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #b0bec5;
+  margin-bottom: 30px;
+  font-size: 1rem;
+  letter-spacing: 0.3px;
+}
+
+/* ========= Inputs ========= */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 22px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  font-weight: 600;
+  color: #cfd8dc;
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+}
+
+.input-group input {
+  padding: 10px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+.input-group input::placeholder {
+  color: #b0bec5;
+}
+
+.input-group input:focus {
+  border-color: #00bcd4;
+  outline: none;
+  box-shadow: 0 0 8px rgba(0, 188, 212, 0.5);
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* ========= Button ========= */
+.submit-btn {
+  background: linear-gradient(90deg, #00bcd4, #2196f3);
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  margin-top: 28px;
+  padding: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 188, 212, 0.3);
+}
+
+.submit-btn:hover {
+  background: linear-gradient(90deg, #2196f3, #00bcd4);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 188, 212, 0.5);
+}
+
+/* ========= Animation ========= */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInBg {
+  from {
+    opacity: 0;
+    background-position: left;
+  }
+  to {
+    opacity: 1;
+    background-position: right;
+  }
+}
+
+/* ========= Responsive ========= */
+@media (max-width: 768px) {
+  .form-card {
+    padding: 25px 30px;
+  }
+  .form-card h2 {
+    font-size: 1.6rem;
+  }
+}
+
+
+/* ========= Desktop Layout ========= */
+.postride-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: linear-gradient(135deg, #e0f7fa, #f1f8e9);
+  padding: 50px 80px;
+}
+
+/* ========= Wide Card ========= */
+.form-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 1000px;
+  padding: 40px 60px;
+  margin-top: 30px;
+  transition: all 0.3s ease;
+}
+
+.form-card:hover {
+  transform: translateY(-3px);
+}
+
+/* ========= Step Tabs (like your reference image) ========= */
+.step-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 25px;
+}
+
+.step-tabs button {
+  background: #007bff;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.step-tabs button:hover {
+  background: #0056b3;
+}
+
+.step-tabs button.active {
+  background: #2196f3;
+  box-shadow: 0 4px 10px rgba(33, 150, 243, 0.3);
+}
+
+/* ========= Form Steps ========= */
+.form-step h2 {
+  color: #007bff;
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.form-step input,
+.form-step select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.form-step input:focus,
+.form-step select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.3);
+}
+
+/* ========= Buttons ========= */
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* ========= Suggestions Dropdown ========= */
+.autocomplete-container {
+  position: relative;
+}
+
+.suggestions-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  margin-top: 4px;
+  list-style: none;
+  padding: 0;
+  max-height: 180px;
+  overflow-y: auto;
+  z-index: 10000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.suggestions-list li {
+  padding: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.suggestions-list li:hover {
+  background-color: #f3f4f6;
+}
+
+/* ========= Smooth Animation ========= */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-3px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.postride-container {
+  max-width: 800px;
+  margin: 20px auto;
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.heading {
+  text-align: center;
+  color: #0a1931;
+  margin-bottom: 25px;
+}
+
+.steps {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.step {
+  flex: 1;
+  text-align: center;
+  padding: 12px;
+  border-radius: 8px;
+  background: #f1f5f9;
+  color: #333;
+  font-weight: 500;
+}
+
+.step.active {
+  background: #00bcd4;
+  color: #fff;
+}
+
+.step-content {
+  margin-bottom: 25px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.add-btn {
+  margin-top: 10px;
+  background: #00bcd4;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.image-preview {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.image-box {
+  position: relative;
+}
+
+.image-box img {
+  width: 120px;
+  height: 100px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.image-box button {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  background: rgba(255, 0, 0, 0.8);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.nav-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.prev {
+  background: #ccc;
+}
+
+.next {
+  background: #007bff;
+  color: white;
+}
+
+.submit {
+  background: #28a745;
+  color: white;
+}
+
+.suggestions-container {
+  position: relative;
+  width: 100%;
+}
+
+.suggestions-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  z-index: 9999;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.suggestion-item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.suggestion-item:hover {
+  background-color: #f0f0f0;
+}
+
+.suggestions-container {
+  position: relative;
+  width: 100%;
+}
+
+.suggestions-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  z-index: 1000;
+  max-height: 200px;
+  overflow-y: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.suggestion-item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.suggestion-item:hover {
+  background-color: #f0f0f0;
+}
+
+
+/* Top Navbar */
+.top-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0b2545;
+  padding: 10px 20px;
+  color: #0ff;
+}
+.top-navbar .logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #0ff;
+}
+.top-navbar .nav-links a,
+.top-navbar .nav-links .nav-btn {
+  margin-left: 15px;
+  background: linear-gradient(to right, #0ff, #00c6ff);
+  border: none;
+  padding: 5px 12px;
+  border-radius: 6px;
+  color: #000;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 200px;
+  height: 100%;
+  background-color: #0b2545;
+  color: #0ff;
+  padding: 20px 0;
+}
+.sidebar-heading {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+}
+.sidebar-menu li {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.sidebar-menu li.active,
+.sidebar-menu li:hover {
+  background-color: #00c6ff;
+  color: #000;
+}
+.sidebar-menu li.logout {
+  color: #ff4d4d;
+  margin-top: 20px;
+}
+
+/* Main Content */
+.main-content {
+  margin-left: 220px;
+  padding: 20px;
+}

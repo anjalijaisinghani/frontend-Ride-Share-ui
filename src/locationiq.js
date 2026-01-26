@@ -1,0 +1,2 @@
+const LOCATIONIQ_API_KEY = "pk.YOUR_REAL_KEY_HERE";
+export default LOCATIONIQ_API_KEY;
