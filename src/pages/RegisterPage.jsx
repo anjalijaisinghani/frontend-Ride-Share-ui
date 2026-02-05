@@ -320,6 +320,8 @@ export default function RegisterPage() {
     try {
       const userData = { fullName: name, email, password, mobile, role };
       const response = await axios.post(`${API_BASE_URL}/register`, userData);
+      console.log("Register URL:", `${API_BASE_URL}/register`, userData);
+
 
       if (response.data.success) {
         alert("✅ Registration successful!");
