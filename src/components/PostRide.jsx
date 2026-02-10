@@ -677,6 +677,7 @@ export default function PostRide({ driverEmail }) {
     destinationCity: "",
     baseFare: "",
     farePerKm: "",
+    distance: "",
     totalFare: "",
     date: "",
   });
@@ -769,7 +770,9 @@ const handleFareChange = (e) => {
       (!rideInfo.sourceCity ||
         !rideInfo.destinationCity ||
         !rideInfo.baseFare ||
-        !rideInfo.farePerKm)
+        !rideInfo.farePerKm)||
+        !rideInfo.distance ||
+          !rideInfo.date
     ) {
       Swal.fire("Please complete Step 1 details");
       return;
@@ -821,11 +824,13 @@ const handleFareChange = (e) => {
     try {
       const formData = new FormData();
       formData.append("driverEmail", driverEmail);
-      formData.append("source", rideInfo.sourceCity);
-      formData.append("destination", rideInfo.destinationCity);
+      formData.append("sourceCity", rideInfo.sourceCity);
+      formData.append("destinationCity", rideInfo.destinationCity);
+      formData.append("distance", rideInfo.distance);
       formData.append("baseFare", rideInfo.baseFare);
       formData.append("farePerKm", rideInfo.farePerKm);
-      formData.append("totalFare", rideInfo.totalFare);
+      formData.append("totalFare", Number(rideInfo.totalFare));
+
       formData.append("date", rideInfo.date);
 
       formData.append("pickupLocations", JSON.stringify(pickupLocations));
@@ -836,9 +841,9 @@ const handleFareChange = (e) => {
       formData.append("availableSeats", vehicleData.availableSeats);
       vehicleImages.forEach((img) => formData.append("vehicleImages", img));
 
-      await axios.post("http://localhost:8080/v1/rides/add", formData, {
-  headers: { "Content-Type": "multipart/form-data" },
-});
+      await axios.post("http://localhost:8080/v1/rides/add", formData, 
+  // headers: { "Content-Type": "multipart/form-data" },
+);
 
       Swal.fire("Ride posted successfully!");
       setStep(1);
